@@ -1,0 +1,19 @@
+/**index.wxss**/
+.head-col{
+    height: 100%;
+ }
+ .head-row{
+   outline-style: solid;
+   outline-color: #f1efee;
+   outline-width: 1rpx;
+   border: 1rpx #f1efee;
+   border-style: solid;
+    height: 100rpx;
+ }
+ .line{
+   margin: auto;
+   width: 80%;
+   border-style: solid;
+   border-width: 1rpx;
+   border-color: #f4f4f4;
+ }

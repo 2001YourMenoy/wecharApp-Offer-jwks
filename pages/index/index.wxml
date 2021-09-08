@@ -1,0 +1,28 @@
+<scroll-view>
+    <van-row custom-class="head-row">
+        <van-col span="4" custom-class="head-col">
+            <view style=" height: 100%;display: flex;">
+                <text style="font-size: 46rpx; color: #4CAF50; font-weight: bold;margin: auto;">豆瓣</text>
+            </view>
+        </van-col>
+        <van-col span="20" custom-class="head-col">
+            <view style="height: 100%; justify-content: center; align-items: center;">
+                <van-search value="{{ value }}" shape="round" placeholder="搜索" />
+            </view>
+
+        </van-col>
+    </van-row>
+    <view>
+        <view style="height: 80rpx;display: flex; align-items: center;"> <text
+                style="font-size: 36rpx;margin-left: 10rpx; font-weight: 300;">找电影</text></view>
+        <view wx:for="{{movie}}" wx:for-index="movieIndex" wx:for-item="movieItem" wx:key="movie" wx:for-index="index">
+            <item bindtap="go" data-query="{{index}}" cover="{{movieItem.cover}}" rate="{{movieItem.rate}}" age="{{movieItem.age}}" 
+			movie="{{movieItem.movie}}" address="{{movieItem.address}}" actor="{{movieItem.actor}}">
+          
+            </item>
+            <view class="line" style="margin-bottom: 20rpx;"></view>
+        </view>
+
+
+    </view>
+</scroll-view>

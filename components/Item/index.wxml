@@ -1,0 +1,31 @@
+<view style=" height: 260rpx;display: flex; overflow: hidden;">
+    <view style="height: 100%; width: 30%;display: flex; justify-content: center;">
+        <image src="{{cover}}" style="width: 66%; border-radius: 10rpx; height: 75%;" mode="scaleToFill"></image>
+    </view>
+
+
+    <view style="width: 70%;max-width: 100%;">
+        <view>
+            <text>{{movie}}</text><text style="margin-left: 10rpx;">{{age}}</text>
+        </view>
+        <view style="display: flex; justify-content: space-between;">
+            <view>
+                <van-rate value="{{rate}}" allow-half readonly color="#ffd21e" void-icon="star" void-color="#eee"
+                    color="#ffd21e" size="20rpx" />
+                <text style="margin-left: 10rpx; font-size: 18rpx; color:#616161;">{{rate*2}}</text>
+            </view>
+            <view style="display: flex ; flex-direction: column;margin-right: 10rpx;">
+                <van-icon name="like-o" color="#ffac2d" size="22rpx" />
+                <text style="color:#ffac2d; font-size: 22rpx;">想看</text>
+            </view>
+        </view>
+        <view style="width: 80%;font-size: 22rpx;">
+            <text>{{age}}年</text><text wx:for="{{address}}" wx:key="address" wx:for-item="addresss">/{{addresss}}</text>
+           <text wx:for="{{actor}}" wx:key="actor" wx:for-item="actors">/{{actors}}</text>
+        </view>
+        <view style="display: flex;padding: 10rpx;  width: 100%;">
+            <view style="padding: 10rpx; width: 80%;background-color:#f7f7f7; "><text style="font-size: 22rpx;">您可能感兴趣</text></view>
+        </view>
+    </view>
+    
+</view>
